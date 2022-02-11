@@ -3,7 +3,7 @@
 
 ################# FRASE QUE DEFINE NUESTRA APLICACION WEB #####################
 
-Un gestor de inventario inmarcesible.
+--- Un gestor de inventario inmarcesible. ---
 
 Nuestro MINI proyecto, va a tratar sobre un gestor de inventario, la cual va a tener:
 
@@ -12,7 +12,6 @@ Nuestro MINI proyecto, va a tratar sobre un gestor de inventario, la cual va a t
     - Alertas de stock.
     - Informacion almacenada en un servidor seguro.
     - Los administradores tienen su parte reservada.
-    - 
 
 
 ------HOLDED-----
@@ -32,26 +31,25 @@ Desvantajas:
 
 3- Fallos en la aplicacion, detectados por los usuarios(app congelada, carga de datos y saltan errores, etc...)
 
-4- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 ----ODOO INVENTORY----
 
------FACTUSOL------
+Ventajas
+
+1- Precios bajos y su version basica es gratuita
+2- Es muy personalizable
+3- Codigo abierto
+4- Su seguridad es buena
+
+
+
+Desvantajas
+
+1- No compatibles con versiones anteriores
+2- Hasta hace poco no resolvian errores de su sitio web
+3- La aplicacion no esta bien documentada
+
+
 
