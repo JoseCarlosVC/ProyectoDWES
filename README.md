@@ -51,6 +51,9 @@ Desvantajas
 2- Hasta hace poco no resolvian errores de su sitio web
 3- La aplicacion no esta bien documentada
 
+---Diagrama de Gantt---
+
+https://drive.google.com/file/d/1IZ4127TiplD7GSOuynLcmhTtWNBGetB2/view?usp=sharing
 
 ---Ciclo de software---
 
