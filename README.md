@@ -52,4 +52,7 @@ Desvantajas
 3- La aplicacion no esta bien documentada
 
 
+---Ciclo de software---
+Vamos a utilizar la filosofía Kanban, con la que repartiremos las tareas mediante la aplicación Notion y utilizaremos Scrum para tener reuniones cada 2 d
+
 
