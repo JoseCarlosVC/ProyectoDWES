@@ -60,3 +60,7 @@ https://drive.google.com/file/d/1IZ4127TiplD7GSOuynLcmhTtWNBGetB2/view?usp=shari
 Vamos a utilizar la filosofía Kanban, con la que repartiremos las tareas mediante la aplicación Notion y utilizaremos Scrum para tener reuniones cada 2 días
 
 
+---Arquitectura---
+
+Vamos a utilizar la arquitectura modelo-vista-controlador, ya que no vamos a utilizar motores de plantillas y nos permite dividir la apliación de una forma m
+
