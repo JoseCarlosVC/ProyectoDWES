@@ -10,13 +10,12 @@ if(isset($_POST['submit'])){
         require_once("./app/conexion.inc.php");
         $conexion = Conexion::openConexion();
         //consulta para obtener los datos del usuario
-        $existe = $conexion->query("SELECT * FROM Usuario WHERE correo='$correo'");
+        $existe = $conexion->query("SELECT nombre,correo,pass FROM Usuario WHERE correo='$correo'");
         //fetch para acceder a la informacion de la consulta
-        $comprobacion=$existe->fetch;
-        
+        $comprobacion=$existe->fetch();
         //si no coinciden las pass se muestra un aviso sino se crean sesiones
         
-        if(password_verify($passwd,$comprobacion['pass'])){
+        if(!password_verify($passwd,$comprobacion['pass'])){
             echo "Contraseña incorrecta, intentelo de nuevo";
         }else{
             //inicios de las sesiones
@@ -25,12 +24,13 @@ if(isset($_POST['submit'])){
             $_SESSION['nombre'] = $user;
             $_SESSION['correo'] = $mail;
             $_SESSION['pass'] = $password;
-
+            echo "Sesion iniciada";
+            //TODO enviar a la página principal
         }
     }
 }
 //si se pulsa el boton de cerrar sesion, se destruiran las sesiones asignadas previamente
-if(isset($_POST['close'])){
+if(isset($_GET['close'])){
     //se cierra la sesion nombre
     if(isset($_SESSION['nombre'])){
         unset($_SESSION['nombre']);
