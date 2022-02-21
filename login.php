@@ -15,7 +15,8 @@ if(isset($_POST['submit'])){
         $comprobacion=$existe->fetch;
         
         //si no coinciden las pass se muestra un aviso sino se crean sesiones
-        if($comprobacion['pass'] != $passwd){
+        
+        if(password_verify($passwd,$comprobacion['pass'])){
             echo "Contraseña incorrecta, intentelo de nuevo";
         }else{
             //inicios de las sesiones
@@ -26,7 +27,6 @@ if(isset($_POST['submit'])){
             $_SESSION['pass'] = $password;
 
         }
-        
     }
 }
 //si se pulsa el boton de cerrar sesion, se destruiran las sesiones asignadas previamente
