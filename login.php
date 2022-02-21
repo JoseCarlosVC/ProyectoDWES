@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
         require_once("./app/conexion.inc.php");
         $conexion = Conexion::openConexion();
         //consulta para obtener los datos del usuario
-        $existe = $conexion->query("SELECT * FROM usuario WHERE correo='$correo'");
+        $existe = $conexion->query("SELECT * FROM Usuario WHERE correo='$correo'");
         //fetch para acceder a la informacion de la consulta
         $comprobacion=$existe->fetch;
         
