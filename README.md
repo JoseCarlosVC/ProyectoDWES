@@ -2,7 +2,7 @@
 
 # FRASE QUE DEFINE NUESTRA APLICACION WEB
 
-### Un gestor de inventario inmarcesible.
+## Un gestor de inventario inmarcesible.
 
 Nuestro MINI proyecto, va a tratar sobre un gestor de inventario, la cual va a tener:
 
