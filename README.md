@@ -19,30 +19,30 @@ Nuestro MINI proyecto, va a tratar sobre un gestor de inventario, la cual va a t
 
 #### Ventajas:
 
-1- Sincronizados con las cuentas bancarias.
-2- Interfaz grafica muy agradable para los usuarios.
+- Sincronizados con las cuentas bancarias.
+- Interfaz grafica muy agradable para los usuarios.
 
 #### Desvantajas:
 
-1- Login mal hecho(no utilizan expresiones regulares, el telefono permite '000000000').
-2- Precios no asequibles, 10€ mensauales 120€ anuales, la opcion basica
-3- Fallos en la aplicacion, detectados por los usuarios(app congelada, carga de datos y saltan errores, etc...)
+- Login mal hecho(no utilizan expresiones regulares, el telefono permite '000000000').
+- Precios no asequibles, 10€ mensauales 120€ anuales, la opcion basica
+- Fallos en la aplicacion, detectados por los usuarios(app congelada, carga de datos y saltan errores, etc...)
 
 
 ## ----ODOO INVENTORY----
 
 #### Ventajas
 
-1- Precios bajos y su version basica es gratuita
-2- Es muy personalizable
-3- Codigo abierto
-4- Su seguridad es buena
+- Precios bajos y su version basica es gratuita
+- Es muy personalizable
+- Codigo abierto
+- Su seguridad es buena
 
 #### Desvantajas
 
-1- No compatibles con versiones anteriores
-2- Hasta hace poco no resolvian errores de su sitio web
-3- La aplicacion no esta bien documentada
+- No compatibles con versiones anteriores
+- Hasta hace poco no resolvian errores de su sitio web
+- La aplicacion no esta bien documentada
 
 
 # ---Diagrama de Gantt---
