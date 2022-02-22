@@ -1,7 +1,5 @@
 <?php
 
-use Symfony\Component\VarDumper\VarDumper;
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 // las unidades son un campo number con minimo de uno para que no pueda ser nulo, aun así esta hecha la comprobacion

@@ -21,11 +21,11 @@ if(isset($_POST['submit'])){
             $user = $comprobacion['nombre'];
             //inicios de las sesiones
             session_start();
-
             $_SESSION['nombre'] = $user;
             $_SESSION['correo'] = $correo;
             $_SESSION['pass'] = $passwd;
             echo "Sesion iniciada";
+            header("Location: ./gestor.php");
             //TODO enviar a la página principal
         }
     }
