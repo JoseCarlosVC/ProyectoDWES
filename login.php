@@ -18,12 +18,13 @@ if(isset($_POST['submit'])){
         if(!password_verify($passwd,$comprobacion['pass'])){
             echo "Contraseña incorrecta, intentelo de nuevo";
         }else{
+            $user = $comprobacion['nombre'];
             //inicios de las sesiones
             session_start();
 
             $_SESSION['nombre'] = $user;
-            $_SESSION['correo'] = $mail;
-            $_SESSION['pass'] = $password;
+            $_SESSION['correo'] = $correo;
+            $_SESSION['pass'] = $passwd;
             echo "Sesion iniciada";
             //TODO enviar a la página principal
         }

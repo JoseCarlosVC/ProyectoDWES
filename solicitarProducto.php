@@ -1,7 +1,13 @@
 <?php
+
+use Symfony\Component\VarDumper\VarDumper;
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 // las unidades son un campo number con minimo de uno para que no pueda ser nulo, aun así esta hecha la comprobacion
 if(isset ($_POST['solicitud'])){
-    if(isset($_POST['nif']) && isset ($_POST['$unidades'])){
+    if(isset($_POST['nif']) && isset ($_POST['unidades'])){
+        echo "hola";
         
         //asignacion de variables
         $nif = $_POST['nif'];
@@ -14,7 +20,7 @@ if(isset ($_POST['solicitud'])){
         //se obtiene el precio del producto
         $infoProducto = $conexion->query("SELECT precio FROM Producto WHERE Nif = '$nif'");
         $infoPFetch = $infoProducto->fetch();
-        $precio = $infoProducto['precio'];
+        $precio = $infoPFetch['precio'];
 
         //se multiplica el precio del producto con las unidades para asignarlo como precio total 
         $precio*=$unidades;
@@ -22,13 +28,13 @@ if(isset ($_POST['solicitud'])){
         //recogida del correo almacenado en una sesion
         session_start();
         $mail = $_SESSION['correo'];
-
+        
         //consulta para obtener el id del usuario mediante el correo
         $infoUser = $conexion->query("SELECT idUser FROM Usuario WHERE correo ='$mail'");
         $infoUFetch = $infoUser->fetch();
-
+        $idUser = $infoUFetch['idUser'];
         //consulta para hacer una insercion en la tabla Pedir
-        $peticion = $conexion->query("INSERT INTO Pedir (Nif,idUser,unidad,precioTotal) VALUES ('$nif','$mail','$unidades','$precio')");
+        $peticion = $conexion->query("INSERT INTO Pedir (Nif,idUser,unidad,precioTotal) VALUES ('$nif','$idUser','$unidades','$precio')");
         $peticionFetch = $peticion->fetch();
     }
 }
