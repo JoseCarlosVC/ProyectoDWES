@@ -40,7 +40,7 @@ CREATE TABLE Producto(
 );
 CREATE TABLE Pedir(
     Nif VARCHAR(200),
-    idUser int ,
+    idUser int,
     unidad int NOT NULL,
     precioTotal decimal (10,2) NOT NULL,
     FOREIGN KEY (Nif) REFERENCES Producto (Nif) ON UPDATE CASCADE ON DELETE CASCADE,
