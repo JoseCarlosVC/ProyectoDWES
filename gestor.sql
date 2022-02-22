@@ -29,7 +29,7 @@ CREATE TABLE Administrador(
     fechaNac date NOT NULL
 );
 CREATE TABLE Producto(
-    idProducto int AUTO_INCREMENT PRIMARY KEY,
+    Nif VARCHAR(200) PRIMARY KEY,
     cantidad int NOT NULL,
     proveedor varchar(200) NOT NULL,
     nombreProducto varchar(200) NOT NULL,
@@ -39,11 +39,11 @@ CREATE TABLE Producto(
     descripcion varchar(500) NOT NULL
 );
 CREATE TABLE Pedir(
-    idProducto int,
+    Nif VARCHAR(200),
     idUser int ,
     unidad int NOT NULL,
     precioTotal decimal (10,2) NOT NULL,
-    FOREIGN KEY (idProducto) REFERENCES Producto (idProducto) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (Nif) REFERENCES Producto (Nif) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (idUser) REFERENCES Usuario (idUser) ON UPDATE CASCADE ON DELETE CASCADE,
-    PRIMARY KEY (idProducto,idUser) 
+    PRIMARY KEY (Nif,idUser) 
 );
