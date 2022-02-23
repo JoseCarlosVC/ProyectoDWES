@@ -10,7 +10,10 @@
 
 <body>
     <form action="./../solicitarProducto.php" method="post">
-        <input type="text" name="nif">
+        <input type="text" name="nif" value="<?php if(isset($_GET['nif'])){
+            echo $_GET['nif'];
+        }
+         ?>">
         <br>
         <input type="number" name="unidades">
         <br>

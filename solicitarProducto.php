@@ -5,7 +5,6 @@ error_reporting(E_ALL);
 // las unidades son un campo number con minimo de uno para que no pueda ser nulo, aun así esta hecha la comprobacion
 if(isset ($_POST['solicitud'])){
     if(isset($_POST['nif']) && isset ($_POST['unidades'])){
-        echo "hola";
         
         //asignacion de variables
         $nif = $_POST['nif'];
