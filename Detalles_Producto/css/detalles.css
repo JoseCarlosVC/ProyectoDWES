@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #EDF2EF;
+}
+.logo{
+    text-align: center;
+}
+.contenido{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 80%;
+    margin: auto;
+    gap: 10px;
+}
+.imagen{
+    /* border: solid 1px red; */
+    grid-row-end: span 1;
+    text-align: center;
+}
+.imagen img{
+    width: 75%;
+}
+.datos{
+    display: block;
+}
+.nombre,.precio,.unidades,.descripcion{
+    font-size: 2.5em;
+    background-color: #C8E7ED;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+}
+.descripcion{
+    font-size: 1.25em;
+}
+form{
+    width: 20%;
+}
+.qr{
+    position: absolute;
+    /*! left: 20%; MODIFICAR */
+}
+/* .nombre{
+    border: solid 1px pink;
+}
+.precio{
+    border: solid 1px blue;
+}
+.unidades{
+    border: solid 1px purple;
+}
+.descripcion{
+    border: solid 1px black;
+} */
+.boton{
+    margin-top: 5px;
+}
