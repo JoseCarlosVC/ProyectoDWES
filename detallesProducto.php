@@ -21,8 +21,26 @@ if(isset($_POST['detalles'])){
         "Proveedor: ".$fetchDatos['proveedor'].
         "Descripcion: ".$fetchDatos['descripcion'].
         "Unidades".$fetchDatos['cantidad'];
-}
+}   
+
 ?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>DetallesProducto</title>
+        </head>
+        <body>
+            <div class="imagenProducto">
+                <img src="data:image/png;charset=utf8;base64,<?php echo base64_encode($fetchDatos['imagen']); ?>">
+            </div> 
+        </body>
+    </html>
+
+    
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
