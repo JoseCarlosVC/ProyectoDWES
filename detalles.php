@@ -6,17 +6,20 @@ ini_set('display_errors', '1');
 
 <!DOCTYPE html>
 <html>
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="witdh=device,initial-scale=1.0">
-        <meta name="lang" content="es-ES">
-        <meta name="author" content="Emilio">
-        <meta name="keywords" content="computers,programming,web design,html,html,html5,css,php">
-        <meta name="description" content="Realización de">
-        <title>Detalles</title>
-        <link rel="stylesheet" href="./css/detalles.css" title="style">
-        <link rel="icon" type="image/png" href="./img/LOGO.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdh=device,initial-scale=1.0">
+    <meta name="lang" content="es-ES">
+    <meta name="author" content="Emilio">
+    <meta name="keywords" content="computers,programming,web design,html,html,html5,css,php">
+    <meta name="description" content="Realización de">
+    <title>Detalles</title>
+    <link rel="stylesheet" href="./css/detalles.css" title="style">
+    <link rel="icon" type="image/png" href="./img/LOGO.png">
+
 </head>
+
 <body>
     <!-- Menu hamburguesa -->
     <input type="checkbox" id="invisibleCheckbox">
@@ -41,12 +44,15 @@ ini_set('display_errors', '1');
 
     <!-- Contenido de la página -->
     <div class="contenido">
-        <div class="imagen"><img src="./img/descarga.jpeg" alt="imagenProducto"></div>
+        <div class="imagen">
+            <img src="data:image/png;charset=utf8;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>"
+                alt="imagenProducto">
+        </div>
         <div class="datos">
-            <div class="nombre">Pley Estachon</div>
-            <div class="precio">1000€</div>
-            <div class="unidades">Ud: 5</div>
-            <div class="descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat nesciunt soluta cupiditate itaque totam sequi dolor esse, ad recusandae architecto et ea nostrum qui temporibus. Sapiente, voluptas. Blanditiis, porro ab!</div>
+            <div class="nombre"><?php echo $fetchDatos['nombreProducto']; ?></div>
+            <div class="precio"><?php echo $fetchDatos['precio']; ?></div>
+            <div class="unidades"><?php echo $fetchDatos['cantidad']; ?></div>
+            <div class="descripcion"><?php echo $fetchDatos['descripcion']; ?></div>
         </div>
         <div class="formularios">
             <form action="">
@@ -57,8 +63,6 @@ ini_set('display_errors', '1');
             </form>
         </div>
     </div>
-    <?php
-
-    ?>
 </body>
+
 </html>
