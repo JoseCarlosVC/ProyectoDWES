@@ -15,12 +15,12 @@ if(isset($_POST['detalles'])){
     //se muestran los daots del producto
     //TODO descomprimir foto
     echo //"Foto: ".$fetchDatos['fotoProducto'].
-         "Nombre: ".$fetchDatos['nombreProducto'].
-         "Precio: ".$fetchDatos['precio'].
-         "Categoria".$fetchDatos['categoria'].
-         "Proveedor: ".$fetchDatos['proveedor'].
-         "Descripcion: ".$fetchDatos['descripcion'].
-         "Unidades".$fetchDatos['cantidad'];
+        "Nombre: ".$fetchDatos['nombreProducto'].
+        "Precio: ".$fetchDatos['precio'].
+        "Categoria".$fetchDatos['categoria'].
+        "Proveedor: ".$fetchDatos['proveedor'].
+        "Descripcion: ".$fetchDatos['descripcion'].
+        "Unidades".$fetchDatos['cantidad'];
 }
 ?>
 <!-- <!DOCTYPE html>
