@@ -17,3 +17,4 @@
     }
     $conexion = Conexion::closeConexion();
     require('gestor.php');
+    
