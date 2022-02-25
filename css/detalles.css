@@ -1,14 +1,16 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background-color: #EDF2EF;
 }
+
 /*CAPA SUPERIOR DEL MENU HAMBURGUESA,
 EL CHECKBOX VA POR ENCIMA DEL CONTENEDOR Y LAS LINEAS.*/
-#invisibleCheckbox{
+#invisibleCheckbox {
     position: relative;
     width: 60px;
     height: 60px;
@@ -22,7 +24,7 @@ EL CHECKBOX VA POR ENCIMA DEL CONTENEDOR Y LAS LINEAS.*/
 LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 
 /*Esta es la linea intermedia*/
-.lineaHamburguesa{
+.lineaHamburguesa {
     background-color: #F97068;
     display: inline-block;
     height: 5px;
@@ -36,7 +38,7 @@ LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 }
 
 /*Esta es la linea superior*/
-.lineaHamburguesa:first-child{
+.lineaHamburguesa:first-child {
     background-color: #F97068;
     display: inline-block;
     height: 5px;
@@ -50,7 +52,7 @@ LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 }
 
 /*Esta es la linea inferior*/
-.lineaHamburguesa:last-child{
+.lineaHamburguesa:last-child {
     background-color: #F97068;
     display: inline-block;
     height: 5px;
@@ -65,7 +67,7 @@ LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 
 /*CAPA INFERIOR, ES EL CONTENEDOR DEL MENU HAMBURGUESA,
 SIMPLEMENTE ESTA DE FONDO.*/
-#contenedorHamburguesa{
+#contenedorHamburguesa {
     display: inline-block;
     position: absolute;
     left: 2%;
@@ -79,7 +81,7 @@ SIMPLEMENTE ESTA DE FONDO.*/
 /*--------------------------------------------------------------*/
 
 /*Cajon verde que lleva las secciones del menú*/
-#barraDesplegable{
+#barraDesplegable {
     position: absolute;
     top: 0;
     left: -250px;
@@ -92,7 +94,7 @@ SIMPLEMENTE ESTA DE FONDO.*/
 }
 
 /*Secciones del menu hamburguesa*/
-.apartados{
+.apartados {
     margin-left: 10%;
     margin-top: 1vh;
     list-style: none;
@@ -103,11 +105,12 @@ SIMPLEMENTE ESTA DE FONDO.*/
 /*--------------------------------------------------------------------*/
 
 /*Efecto de las secciones del menú*/
-li:hover{
+li:hover {
     font-weight: bold;
     color: #F97068;
 }
-li:last-of-type{
+
+li:last-of-type {
     font-weight: bold;
     color: #F97068;
 }
@@ -115,7 +118,7 @@ li:last-of-type{
 /*--------------------------------------------------------------*/
 
 /*Transicion de salida del menú hamburguesa*/
-#invisibleCheckbox:checked~#barraDesplegable{
+#invisibleCheckbox:checked~#barraDesplegable {
     position: absolute;
     top: 0;
     left: 0;
@@ -124,7 +127,7 @@ li:last-of-type{
 }
 
 /*Transicion de recogida del menú hamburguesa*/
-#invisibleCheckbox:not(:checked)~#barraDesplegable{
+#invisibleCheckbox:not(:checked)~#barraDesplegable {
     position: absolute;
     top: 0;
     left: -20vw;
@@ -133,14 +136,14 @@ li:last-of-type{
 }
 
 /*Transicion de rotacion de la barra superior del menú*/
-#invisibleCheckbox:checked~#contenedorHamburguesa>#linea1{
+#invisibleCheckbox:checked~#contenedorHamburguesa>#linea1 {
     background-color: #F97068;
     transform: rotateZ(50deg);
     transform-origin: left;
 }
 
 /*Transicion de ocultacion de la segunda barra del menú*/
-#invisibleCheckbox:checked~#contenedorHamburguesa>#linea2{
+#invisibleCheckbox:checked~#contenedorHamburguesa>#linea2 {
     background-color: #F97068;
     transform: rotateY(90deg);
     transform-origin: left;
@@ -148,70 +151,85 @@ li:last-of-type{
 }
 
 /*Transicion de rotacion de la barra inferior del menú*/
-#invisibleCheckbox:checked~#contenedorHamburguesa>#linea3{
+#invisibleCheckbox:checked~#contenedorHamburguesa>#linea3 {
     background-color: #F97068;
     transform: rotateZ(-50deg);
     transform-origin: left;
 }
+
 /* Damos formato al logo */
-.logo{
+.logo {
     text-align: center;
     top: 0;
     position: absolute;
     left: 40%;
 }
+
 /* Damos formato a contenido con grid */
-.contenido{
+.contenido {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 80%;
     margin: 100px auto;
     gap: 10px;
 }
+
 /* Damos formato a la imagen haciedo que ocupe dos filas */
-.imagen{
+.imagen {
     grid-row-end: span 2;
     text-align: center;
 }
-.imagen img{
+
+.imagen img {
     width: 60%;
 }
+
 /* Damos formato a los datos que se mostrarán al usuario */
-.datos{
+.datos {
     display: block;
 }
-.nombre,.precio,.unidades,.descripcion{
+
+.nombre,
+.precio,
+.unidades,
+.descripcion {
     font-size: 2.5em;
     background-color: #C8E7ED;
     border-radius: 25px;
     margin: 10px;
     padding: 10px;
 }
-.descripcion{
+
+.descripcion {
     font-size: 1.25em;
 }
+
 /* Damos formato a los botones de generar el qr y el de hacer pedido */
-form{
+form {
     width: 25%;
 }
-.qr{
+
+.qr {
     background-color: #F97068;
     padding: 15px;
     font-size: 1.25em;
     border-radius: 25px;
     border: solid 2px black;
 }
-.pedido{
-    background-color: #F97068;
+
+.pedido {
+    background-color: #ffa19d;
     padding: 15px;
     font-size: 1.25em;
     border-radius: 25px;
     border: solid 2px black;
 }
-.boton{
+
+.boton {
     margin-top: 5px;
 }
-.formularios{
+
+.formularios {
     display: flex;
     flex-flow: row nowrap;
 }
