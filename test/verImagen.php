@@ -1,16 +1,26 @@
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-    $nif = "004X";
+    $nif = "005X";
 
     //accedemos al archivo para hacer la conexion a base de datos
     require_once("./../app/conexion.inc.php");
     $conexion = Conexion::openConexion();
     
     //consulta para obtener los datos del producto
-    $datosProducto = $conexion->query("SELECT * FROM Producto WHERE nif='$nif'");
-    $fetchDatos = $datosProducto->fetch();
-    var_dump($fetchDatos);
+    try{
+        $datosProducto = $conexion->query("SELECT * FROM Producto WHERE Nif='$nif'");
+        $fetchDatos = $datosProducto->fetch(PDO::FETCH_ASSOC);
+        ?>
+<img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>">
+
+<?php
+        
+    }catch(PDOException $err){
+        echo $err->getMessage();
+    }
+    
+   // var_dump($fetchDatos);
     //se muestran los daots del producto
     //Llamamos a la vista (detalles.php)
   
@@ -28,11 +38,9 @@ ini_set('display_errors', '1');
 <body>
     <?php
 //header("Content-type: image/png");
+//echo $fetchDatos['fotoProducto'];
 //var_dump($fetchDatos['fotoProducto']);
     ?>
-    <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>"
-        alt="imagenPrroducto">
-    <img src="data:image/png;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>" alt="">
 </body>
 <div class="galeria">
 </div>
