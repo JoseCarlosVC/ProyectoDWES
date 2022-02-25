@@ -1,10 +1,10 @@
-*{
+* {
     border: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     background-color: #EDF2EF;
     font-family: 'Exo', sans-serif;
 }
@@ -13,7 +13,7 @@ html{
 
 /*CAPA SUPERIOR DEL MENU HAMBURGUESA,
 EL CHECKBOX VA POR ENCIMA DEL CONTENEDOR Y LAS LINEAS.*/
-#invisibleCheckbox{
+#invisibleCheckbox {
     position: relative;
     width: 60px;
     height: 60px;
@@ -27,8 +27,8 @@ EL CHECKBOX VA POR ENCIMA DEL CONTENEDOR Y LAS LINEAS.*/
 LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 
 /*Esta es la linea intermedia*/
-.lineaHamburguesa{
-    background-color: #F97068;
+.lineaHamburguesa {
+    background-color: #ffa19d;
     display: inline-block;
     height: 5px;
     left: 10px;
@@ -41,8 +41,8 @@ LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 }
 
 /*Esta es la linea superior*/
-.lineaHamburguesa:first-child{
-    background-color: #F97068;
+.lineaHamburguesa:first-child {
+    background-color: #ffa19d;
     display: inline-block;
     height: 5px;
     left: 10px;
@@ -55,8 +55,8 @@ LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 }
 
 /*Esta es la linea inferior*/
-.lineaHamburguesa:last-child{
-    background-color: #F97068;
+.lineaHamburguesa:last-child {
+    background-color: #ffa19d;
     display: inline-block;
     height: 5px;
     left: 10px;
@@ -70,7 +70,7 @@ LAS LINEAS ESTAN VISIBLE POR ENCIMA DEL CONTENEDOR.*/
 
 /*CAPA INFERIOR, ES EL CONTENEDOR DEL MENU HAMBURGUESA,
 SIMPLEMENTE ESTA DE FONDO.*/
-#contenedorHamburguesa{
+#contenedorHamburguesa {
     display: inline-block;
     position: absolute;
     left: 2%;
@@ -84,7 +84,7 @@ SIMPLEMENTE ESTA DE FONDO.*/
 /*--------------------------------------------------------------*/
 
 /*Cajon verde que lleva las secciones del menú*/
-#barraDesplegable{
+#barraDesplegable {
     position: absolute;
     top: 0;
     left: -20vw;
@@ -96,7 +96,7 @@ SIMPLEMENTE ESTA DE FONDO.*/
 }
 
 /*Secciones del menu hamburguesa*/
-.apartados{
+.apartados {
     margin-left: 10%;
     margin-top: 1vh;
     list-style: none;
@@ -107,19 +107,20 @@ SIMPLEMENTE ESTA DE FONDO.*/
 /*--------------------------------------------------------------------*/
 
 /*Efecto de las secciones del menú*/
-li:hover{
+li:hover {
     font-weight: bold;
-    color: #F97068;
+    color: #ffa19d;
 }
-li:last-of-type{
+
+li:last-of-type {
     font-weight: bold;
-    color: #F97068;
+    color: #ffa19d;
 }
 
 /*--------------------------------------------------------------*/
 
 /*Transicion de salida del menú hamburguesa*/
-#invisibleCheckbox:checked~#barraDesplegable{
+#invisibleCheckbox:checked~#barraDesplegable {
     position: absolute;
     top: 0;
     left: 0;
@@ -128,7 +129,7 @@ li:last-of-type{
 }
 
 /*Transicion de recogida del menú hamburguesa*/
-#invisibleCheckbox:not(:checked)~#barraDesplegable{
+#invisibleCheckbox:not(:checked)~#barraDesplegable {
     position: absolute;
     top: 0;
     left: -20vw;
@@ -137,30 +138,30 @@ li:last-of-type{
 }
 
 /*Transicion de rotacion de la barra superior del menú*/
-#invisibleCheckbox:checked~#contenedorHamburguesa>#linea1{
-    background-color: #F97068;
+#invisibleCheckbox:checked~#contenedorHamburguesa>#linea1 {
+    background-color: #ffa19d;
     transform: rotateZ(50deg);
     transform-origin: left;
 }
 
 /*Transicion de ocultacion de la segunda barra del menú*/
-#invisibleCheckbox:checked~#contenedorHamburguesa>#linea2{
-    background-color: #F97068;
+#invisibleCheckbox:checked~#contenedorHamburguesa>#linea2 {
+    background-color: #ffa19d;
     transform: rotateY(90deg);
     transform-origin: left;
     opacity: 10;
 }
 
 /*Transicion de rotacion de la barra inferior del menú*/
-#invisibleCheckbox:checked~#contenedorHamburguesa>#linea3{
-    background-color: #F97068;
+#invisibleCheckbox:checked~#contenedorHamburguesa>#linea3 {
+    background-color: #ffa19d;
     transform: rotateZ(-50deg);
     transform-origin: left;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
 
-#logo{
+#logo {
     width: 150px;
     height: 150px;
     margin-bottom: 1vh;
@@ -170,7 +171,7 @@ li:last-of-type{
     border-radius: 10px;
 }
 
-#nombreUsuario{
+#nombreUsuario {
     display: block;
     margin-left: 10%;
     margin-bottom: 5vh;
@@ -186,7 +187,7 @@ li:last-of-type{
 
 
 
-#contenedorLogo{
+#contenedorLogo {
     position: absolute;
     width: 100%;
     top: 0;
@@ -195,12 +196,13 @@ li:last-of-type{
 
 /*------------------------------------------------------------------*/
 
-#contenedorTabla{
+#contenedorTabla {
     margin: 50px 10%;
     padding: 50px;
     text-align: center;
 }
-table{
+
+table {
     max-width: 900px;
     margin: auto;
     display: flex;
@@ -209,20 +211,25 @@ table{
     background-color: #EDF2EF;
     border-radius: 20px;
 }
-th{
+
+th {
     padding: 5px;
     background-color: #ACDFEB;
 }
-tr{
+
+tr {
     border: 1px solid black;
 }
-table tr:nth-child(odd){
+
+table tr:nth-child(odd) {
     background-color: #ACDFEB;
 }
-table tr:nth-child(even){
+
+table tr:nth-child(even) {
     background-color: #DBEDEE;
 }
-td{
+
+td {
     max-width: 100%;
     overflow: hidden;
     padding: 10px;

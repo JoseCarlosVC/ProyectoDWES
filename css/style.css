@@ -1,30 +1,34 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     background-color: #EDF2EF;
 }
-#logo{
+
+#logo {
     text-align: center;
 }
 
 
 
 
-#contenedorGeneral{
+#contenedorGeneral {
     background-color: #DBEDEE;
     width: 60%;
     margin: auto;
     text-align: center;
     border-radius: 20px;
 }
-#contenedorInfo{
+
+#contenedorInfo {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
-#usuario{
+
+#usuario {
     text-align: center;
     grid-column: span 2;
     margin: 30px auto 0px auto;
@@ -34,7 +38,8 @@ html{
     padding: 15px;
     font-size: 1.25em;
 }
-#contraseña{
+
+#contraseña {
     text-align: center;
     grid-column: span 2;
     margin: 20px auto;
@@ -44,19 +49,22 @@ html{
     padding: 15px;
     font-size: 1.25em;
 }
-#recuerdame{
+
+#recuerdame {
     width: 17px;
     height: 17px;
     font-size: 30px;
     margin-top: 12.5px;
     margin-left: 75px;
     text-align: end;
-    border: 1px solid #F97068;
+    border: 1px solid #ffa19d;
 }
-label{
+
+label {
     font-size: 1.25em;
 }
-#login{
+
+#login {
     font-size: 1.25em;
     padding: 5px;
     margin-top: 5px;
@@ -64,15 +72,17 @@ label{
     margin-left: 38%;
     margin-bottom: 15px;
     width: 120px;
-    background-color: #F97068;
+    background-color: #ffa19d;
     border: 1px solid black;
     border-radius: 20px;
 }
-#registro{
+
+#registro {
     grid-column: span 2;
     margin: 10px auto 15px auto;
 }
-a{
+
+a {
     font-weight: bold;
-    color: #F97068;
+    color: #ffa19d;
 }
