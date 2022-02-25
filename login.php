@@ -17,6 +17,7 @@ if(isset($_POST['submit'])){
         
         if(!password_verify($passwd,$comprobacion['pass'])){
             echo "Contraseña incorrecta, intentelo de nuevo";
+            header("Location: ./index.php");
         }else{
             $user = $comprobacion['nombre'];
             //inicios de las sesiones
@@ -25,8 +26,7 @@ if(isset($_POST['submit'])){
             $_SESSION['correo'] = $correo;
             $_SESSION['pass'] = $passwd;
             echo "Sesion iniciada";
-            header("Location: ./gestor.php");
-            //TODO enviar a la página principal
+            header("Location: ./gestorLogica.php");
         }
     }
 }
