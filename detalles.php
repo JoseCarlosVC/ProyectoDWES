@@ -45,7 +45,7 @@ ini_set('display_errors', '1');
     <!-- Contenido de la página -->
     <div class="contenido">
         <div class="imagen">
-            <img src="data:image/png;charset=utf8;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>"
+            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>"
                 alt="imagenProducto">
         </div>
         <div class="datos">

@@ -3,10 +3,11 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 if(isset($_POST['submit'])){
-
-    $comprobar = getimagesize(($_FILES['imagen']['tmp_name']));
+    $comprobar = getimagesize($_FILES['imagen']['tmp_name']);
     if($comprobar !== false){
         if (isset($_POST['nombre']) && isset($_POST['cantidad']) && isset($_POST['proveedor']) && isset($_POST['categoria']) && isset($_POST['precio']) && isset($_POST['descripcion']) && isset($_POST['nif'])) {
+            $imagen = $_FILES['imagen']['tmp_name'];
+            $imgDatos = addslashes(file_get_contents($imagen));
 
             $nombre = $_POST['nombre'];
             $cantidad = $_POST['cantidad'];
@@ -15,8 +16,6 @@ if(isset($_POST['submit'])){
             $precio = $_POST['precio'];
             $descripcion = $_POST['descripcion'];
             $nif = $_POST['nif'];
-            $imagen = $_FILES['imagen']['tmp_name'];
-            $fotoProd = addslashes(file_get_contents($imagen));
 
             require_once("./app/conexion.inc.php");
             $conexion = Conexion::openConexion();
@@ -34,7 +33,7 @@ if(isset($_POST['submit'])){
             }else{
                 //Si no existe, creamos un nuevo producto
                 try{
-                    $insertar = $conexion->exec("INSERT INTO Producto (Nif,cantidad,proveedor,nombreProducto,fotoProducto,categoria,precio,descripcion) VALUES ('$nif','$cantidad','$proveedor','$nombre','$fotoProd','$categoria','$precio','$descripcion')");
+                    $insertar = $conexion->exec("INSERT INTO Producto (Nif,cantidad,proveedor,nombreProducto,fotoProducto,categoria,precio,descripcion) VALUES ('$nif','$cantidad','$proveedor','$nombre','$imgDatos','$categoria','$precio','$descripcion')");
                 }catch (PDOException $err){
                     echo "Error insertando el producto: " . $err->getMessage();
                 }
