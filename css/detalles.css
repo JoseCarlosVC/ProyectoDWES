@@ -1,12 +1,15 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
+    border: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body {
+html {
     background-color: #EDF2EF;
+    font-family: 'Exo', sans-serif;
 }
+
+/*------------------------------------------------------------*/
 
 /*CAPA SUPERIOR DEL MENU HAMBURGUESA,
 EL CHECKBOX VA POR ENCIMA DEL CONTENEDOR Y LAS LINEAS.*/
@@ -84,13 +87,12 @@ SIMPLEMENTE ESTA DE FONDO.*/
 #barraDesplegable {
     position: absolute;
     top: 0;
-    left: -250px;
+    left: -20vw;
     background-color: #C8E7ED;
     height: 100vh;
-    width: 250px;
+    width: 20vw;
     text-align: left;
     padding-top: 7%;
-    z-index: 1;
 }
 
 /*Secciones del menu hamburguesa*/
@@ -157,6 +159,39 @@ li:last-of-type {
     transform-origin: left;
 }
 
+/*----------------------------------------------------------------------------------------------------*/
+
+#logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1vh;
+    text-align: center;
+    margin-left: 10%;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.fotoPerfil{
+    margin-left:10%;
+    border:1px solid black;
+    border-radius:20px;
+    width:200px;
+    height:200px;
+}
+#nombreUsuario {
+    display: block;
+    margin-left: 10%;
+    margin-bottom: 5vh;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+#contenedorLogo {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+}
+
 /* Damos formato al logo */
 .logo {
     text-align: center;
@@ -180,6 +215,14 @@ li:last-of-type {
     text-align: center;
 }
 
+.fotoPerfil{
+    margin-left:10%;
+    border:1px solid black;
+    border-radius:20px;
+    width:200px;
+    height:200px;
+}
+
 .imagen img {
     width: 60%;
 }
@@ -189,10 +232,7 @@ li:last-of-type {
     display: block;
 }
 
-.nombre,
-.precio,
-.unidades,
-.descripcion {
+.nombre,.precio,.unidades,.descripcion {
     font-size: 2.5em;
     background-color: #C8E7ED;
     border-radius: 25px;

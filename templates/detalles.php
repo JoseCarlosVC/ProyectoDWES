@@ -17,6 +17,12 @@ ini_set('display_errors', '1');
     <title>Detalles</title>
     <link rel="stylesheet" href="./../../css/detalles.css" title="style">
     <link rel="icon" type="image/png" href="./../img/LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Lacquer&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -28,9 +34,13 @@ ini_set('display_errors', '1');
         <span class="lineaHamburguesa" id="linea2"></span>
         <span class="lineaHamburguesa" id="linea3"></span>
     </div>
+    <?php
+        //Vamos a recoger el array creado en gestorLogica y mostrar la tabla
+        foreach($users as $dato):
+    ?>
     <nav id="barraDesplegable">
-        <img src="./../../img/LOGO.png" alt="logo" id="logo">
-        <span id="nombreUsuario">User</span>
+    <img class="fotoPerfil" src="data:image/png;charset=utf8;base64,<?php echo base64_encode($dato['foto']); ?>"alt="imagenProducto">
+        <span id="nombreUsuario"><?php echo $dato['nombre']?></span>
         <li class="apartados">Menús</li>
         <li class="apartados">Para compartir</li>
         <li class="apartados">Hamburguesas</li>
@@ -38,6 +48,9 @@ ini_set('display_errors', '1');
         <li class="apartados">Postres</li>
         <li class="apartados">Cerrar Sesión</li>
     </nav>
+    <?php
+        endforeach;
+    ?>
 
     <!-- Logo -->
     <div class="logo"><img src="./../../img/LOGO.png" alt="LOGO"></div>

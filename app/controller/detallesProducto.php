@@ -12,6 +12,15 @@ if(isset($_GET['nif'])){
     $datosProducto = $conexion->query("SELECT * FROM Producto WHERE nif='$nif'");
     //$fetchDatos = $datosProducto->fetch();
     $fetchDatos = $datosProducto->fetch(PDO::FETCH_ASSOC);
+    
+    $datosUser="SELECT nombre,foto FROM Usuario";
+
+        $usuario=$conexion->prepare($datosUser);
+        $usuario->execute(array());
+        
+        while($info=$usuario->fetch(PDO::FETCH_ASSOC)){
+            $users[]=$info;
+        }
     //se muestran los daots del producto
     //Llamamos a la vista (detalles.php)
     require('./../../templates/detalles.php');
