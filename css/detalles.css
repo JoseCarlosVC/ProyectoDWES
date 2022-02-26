@@ -206,7 +206,7 @@ li:last-of-type {
 
 /* Damos formato a los botones de generar el qr y el de hacer pedido */
 form {
-    width: 25%;
+    width: 40%;
 }
 
 .qr {
@@ -224,12 +224,16 @@ form {
     border-radius: 25px;
     border: solid 2px black;
 }
-
 .boton {
     margin-top: 5px;
 }
-
+.boton:active{
+    background-color: #F97068;
+}
 .formularios {
     display: flex;
     flex-flow: row nowrap;
+}
+.codigoQR>img{
+    padding-top: 20px;
 }
