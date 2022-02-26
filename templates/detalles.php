@@ -14,6 +14,7 @@ ini_set('display_errors', '1');
     <meta name="author" content="Emilio">
     <meta name="keywords" content="computers,programming,web design,html,html,html5,css,php">
     <meta name="description" content="Realización de los detalles del producto del gestor de inventario">
+    <!-- Este script es necesario para que funcione la generación del código QR -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Detalles</title>
     <link rel="stylesheet" href="./../../css/detalles.css" title="style">
@@ -62,6 +63,7 @@ ini_set('display_errors', '1');
                 <input id="precio" type="hidden" value="<?php echo $fetchDatos['precio']; ?>">
                 <input id="cantidad" type="hidden" value="<?php echo $fetchDatos['cantidad']; ?>">
                 <input id="descripcion" type="hidden" value="<?php echo $fetchDatos['descripcion']; ?>">
+                <!-- Aquí mostraremos cuando el usuario clickee el código QR -->
                 <div class="codigoQR"></div>
             </form>
             <form action="">
@@ -70,6 +72,7 @@ ini_set('display_errors', '1');
         </div>
     </div>
     <script>
+        // Usamos AJAX para hacer que en el div se genere el QR con los datos que le hemos pasado de forma oculta por el formulario
         $(document).ready(function(){
             $("#generarQR").submit(function(){
                 $.ajax({

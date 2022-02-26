@@ -234,6 +234,7 @@ form {
     display: flex;
     flex-flow: row nowrap;
 }
+/* Hacemos que el QR salga algo más alejado de los botones, por estética */
 .codigoQR>img{
     padding-top: 20px;
 }
