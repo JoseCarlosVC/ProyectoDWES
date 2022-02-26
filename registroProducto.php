@@ -1,8 +1,9 @@
 <?php
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-if(isset($_POST['submit'])){
+if(isset($_POST['enviar'])){
     $comprobar = getimagesize($_FILES['imagen']['tmp_name']);
     if($comprobar !== false){
         if (isset($_POST['nombre']) && isset($_POST['cantidad']) && isset($_POST['proveedor']) && isset($_POST['categoria']) && isset($_POST['precio']) && isset($_POST['descripcion']) && isset($_POST['nif'])) {
@@ -17,8 +18,18 @@ if(isset($_POST['submit'])){
             $descripcion = $_POST['descripcion'];
             $nif = $_POST['nif'];
 
-            require_once("./app/conexion.inc.php");
-            $conexion = Conexion::openConexion();
+            //require_once("./../../app/conexion.inc.php");
+            //$conexion = Conexion::openConexion();
+            //Por alguna ESTUPIDA RAZÓN si llamo a los archivos de configuración la subida de la imagen no es correcta
+            //Si uso los datos COPIADOS DESDE EL MISMO ARCHIVO FUNCIONA
+            //ESTO QUÉ COJONES ES
+            define('NOMBRE_SERVIDOR', 'localhost');
+            define('NOMBRE_USUARIO', 'adminGestor');
+            define('PASSWORD', 'aa');
+            define('NOMBRE_BD', 'gestor');
+
+            $conexion = new PDO('mysql:host='. NOMBRE_SERVIDOR . '; dbname=' . NOMBRE_BD, NOMBRE_USUARIO, PASSWORD);
+
             //Primero comprobamos si el producto existe en la base de datos
             $existe = $conexion->query("SELECT cantidad FROM Producto WHERE Nif='$nif'");
             if($registro = $existe->fetch()){

@@ -1,7 +1,7 @@
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-    $nif = "007X";
+    $nif = "010X";
 
     //accedemos al archivo para hacer la conexion a base de datos
     //require_once("./../app/conexion.inc.php");

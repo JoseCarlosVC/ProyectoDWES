@@ -1,5 +1,6 @@
 <?php
 
+
 if (isset($_POST['enviar'])) {
 
     ini_set('display_errors', 1);
@@ -22,6 +23,8 @@ if (isset($_POST['enviar'])) {
         define('NOMBRE_BD', 'gestor');
 
         $conexion = new PDO('mysql:host='. NOMBRE_SERVIDOR . '; dbname=' . NOMBRE_BD, NOMBRE_USUARIO, PASSWORD);
+        /*require_once("./../../app/conexion.inc.php");
+        $conexion = Conexion::openConexion();*/
         try {
             $consulta = $conexion->exec("INSERT INTO Producto (Nif,cantidad,proveedor,nombreProducto,fotoProducto,categoria,precio,descripcion) VALUES ('$nif','$cantidad','$proveedor','$nombre','$imgDatos','$categoria','$precio','$descripcion')");
             if ($consulta) {
