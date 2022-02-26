@@ -170,13 +170,15 @@ li:last-of-type {
     border: 3px solid black;
     border-radius: 10px;
 }
-.fotoPerfil{
-    margin-left:10%;
-    border:1px solid black;
-    border-radius:20px;
-    width:200px;
-    height:200px;
+
+.fotoPerfil {
+    margin-left: 10%;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
 }
+
 #nombreUsuario {
     display: block;
     margin-left: 10%;
@@ -215,12 +217,12 @@ li:last-of-type {
     text-align: center;
 }
 
-.fotoPerfil{
-    margin-left:10%;
-    border:1px solid black;
-    border-radius:20px;
-    width:200px;
-    height:200px;
+.fotoPerfil {
+    margin-left: 10%;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
 }
 
 .imagen img {
@@ -232,7 +234,10 @@ li:last-of-type {
     display: block;
 }
 
-.nombre,.precio,.unidades,.descripcion {
+.nombre,
+.precio,
+.unidades,
+.descripcion {
     font-size: 2.5em;
     background-color: #C8E7ED;
     border-radius: 25px;
@@ -264,17 +269,26 @@ form {
     border-radius: 25px;
     border: solid 2px black;
 }
+
 .boton {
     margin-top: 5px;
 }
-.boton:active{
+
+.boton:active {
     background-color: #F97068;
 }
+
 .formularios {
     display: flex;
     flex-flow: row nowrap;
 }
+
 /* Hacemos que el QR salga algo más alejado de los botones, por estética */
-.codigoQR>img{
+.codigoQR>img {
     padding-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
 }

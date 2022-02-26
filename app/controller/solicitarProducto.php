@@ -11,7 +11,7 @@ if(isset ($_POST['solicitud'])){
         $unidades = $_POST['unidades'];
 
         //accedemos al archivo para hacer la conexion a base de datos
-        require_once("./app/conexion.inc.php");
+        require_once("../db/conexion.inc.php");
         $conexion = Conexion::openConexion();
 
         //se obtiene el precio del producto
@@ -35,4 +35,5 @@ if(isset ($_POST['solicitud'])){
         $peticionFetch = $peticion->fetch();
     }
 }
+header("Location: ./gestorLogica.php");
     

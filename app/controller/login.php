@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
         require_once("./../db/conexion.inc.php");
         $conexion = Conexion::openConexion();
         //consulta para obtener los datos del usuario
-        $existe = $conexion->query("SELECT nombre,correo,pass FROM Usuario WHERE correo='$correo'");
+        $existe = $conexion->query("SELECT nombre,correo,pass,idUser FROM Usuario WHERE correo='$correo'");
         //fetch para acceder a la informacion de la consulta
         $comprobacion=$existe->fetch();
         //si no coinciden las pass se muestra un aviso sino se crean sesiones
@@ -19,11 +19,14 @@ if(isset($_POST['submit'])){
             header("Location: ./../../index.php");
         }else{
             $user = $comprobacion['nombre'];
+            $idUser = $comprobacion['idUser'];
+
             //inicios de las sesiones
             session_start();
             $_SESSION['nombre'] = $user;
             $_SESSION['correo'] = $correo;
             $_SESSION['pass'] = $passwd;
+            $_SESSION['idUser'] = $idUser;
             echo "Sesion iniciada";
             header("Location: ./gestorLogica.php");
         }
@@ -43,6 +46,10 @@ if(isset($_GET['close'])){
     if(isset($_SESSION['pass'])){
         unset($_SESSION['pass']);
     }
+    if(isset($_SESSION['idUser'])){
+        unset($_SESSION['idUser']);
+    }
     //destruccion de la sesiones
     session_destroy();
+    header("Location: ./../../index.php");
 }

@@ -28,14 +28,11 @@
         foreach($users as $dato):
     ?>
     <nav id="barraDesplegable">
-    <img class="fotoPerfil" src="data:image/png;charset=utf8;base64,<?php echo base64_encode($dato['foto']); ?>"alt="imagenProducto">
+        <img class="fotoPerfil" src="data:image/png;charset=utf8;base64,<?php echo base64_encode($dato['foto']); ?>"
+            alt="imagenProducto">
         <span id="nombreUsuario"><?php echo $dato['nombre']?></span>
-        <li class="apartados">Menús</li>
-        <li class="apartados">Para compartir</li>
-        <li class="apartados">Hamburguesas</li>
-        <li class="apartados">Complementos</li>
-        <li class="apartados">Postres</li>
-        <li class="apartados">Cerrar Sesión</li>
+        <li class="apartados"><a href="./../../templates/registroProducto.html">Registrar Producto</a></li>
+        <li class="apartados"><a href="./login.php?close=close">Cerrar sesion</a></li>
     </nav>
     <?php
         endforeach;

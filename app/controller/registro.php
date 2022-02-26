@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['registro'])) {
     //Comprobamos que la imagen se ha enviado
     $comprobar = getimagesize(($_FILES['imagen']['tmp_name']));
     if ($comprobar !== false) {

@@ -52,3 +52,5 @@ if(isset($_POST['enviar'])){
         }
     }
 }
+
+header("Location: ./gestorLogica.php");

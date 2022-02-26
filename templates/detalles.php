@@ -41,14 +41,15 @@ ini_set('display_errors', '1');
         foreach($users as $dato):
     ?>
     <nav id="barraDesplegable">
-    <img class="fotoPerfil" src="data:image/png;charset=utf8;base64,<?php echo base64_encode($dato['foto']); ?>"alt="imagenProducto">
+        <img class="fotoPerfil" src="data:image/png;charset=utf8;base64,<?php echo base64_encode($dato['foto']); ?>"
+            alt="imagenProducto">
         <span id="nombreUsuario"><?php echo $dato['nombre']?></span>
-        <li class="apartados">Menús</li>
-        <li class="apartados">Para compartir</li>
-        <li class="apartados">Hamburguesas</li>
-        <li class="apartados">Complementos</li>
-        <li class="apartados">Postres</li>
-        <li class="apartados">Cerrar Sesión</li>
+        <li class="apartados"><a href="./../../templates/registroProducto.html">Registrar Producto</a></li>
+        <li class="apartados"><a
+                href="./../../templates/solicitarProducto.php?nif=<?php echo $fetchDatos['Nif'] ?>">Solicitar
+                Producto</a></li>
+        <li class="apartados"><a href="./gestorLogica.php">Ver Productos</a></li>
+        <li class="apartados"><a href="./login.php?close=close">Cerrar sesion</a></li>
     </nav>
     <?php
         endforeach;
@@ -79,25 +80,31 @@ ini_set('display_errors', '1');
                 <!-- Aquí mostraremos cuando el usuario clickee el código QR -->
                 <div class="codigoQR"></div>
             </form>
-            <form action="">
-                <input class="boton pedido" type="button" value="Hacer pedido">
+            <form action="./../../templates/solicitarProducto.php" method="get">
+                <input type="hidden" name="nif" value="<?php echo $fetchDatos['Nif'] ?>">
+                <input class=" boton pedido" type="submit" value="Hacer pedido">
             </form>
         </div>
     </div>
     <script>
-        // Usamos AJAX para hacer que en el div se genere el QR con los datos que le hemos pasado de forma oculta por el formulario
-        $(document).ready(function(){
-            $("#generarQR").submit(function(){
-                $.ajax({
-                    url:'./generarQR.php',
-                    type:'POST',
-                    data:{nombre:$('#nombre').val(), precio:$('#precio').val(), cantidad:$('#cantidad').val(), descripcion:$('#descripcion').val(),},
-                    success: function(respuesta){
-                        $(".codigoQR").html(respuesta);
-                    },
-                });
+    // Usamos AJAX para hacer que en el div se genere el QR con los datos que le hemos pasado de forma oculta por el formulario
+    $(document).ready(function() {
+        $("#generarQR").submit(function() {
+            $.ajax({
+                url: './generarQR.php',
+                type: 'POST',
+                data: {
+                    nombre: $('#nombre').val(),
+                    precio: $('#precio').val(),
+                    cantidad: $('#cantidad').val(),
+                    descripcion: $('#descripcion').val(),
+                },
+                success: function(respuesta) {
+                    $(".codigoQR").html(respuesta);
+                },
             });
         });
+    });
     </script>
 </body>
 

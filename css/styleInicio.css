@@ -170,13 +170,15 @@ li:last-of-type {
     border: 3px solid black;
     border-radius: 10px;
 }
-.fotoPerfil{
-    margin-left:10%;
-    border:1px solid black;
-    border-radius:20px;
-    width:200px;
-    height:200px;
+
+.fotoPerfil {
+    margin-left: 10%;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
 }
+
 #nombreUsuario {
     display: block;
     margin-left: 10%;
@@ -234,3 +236,8 @@ td {
 }
 
 /*Prueba git**/
+
+a {
+    text-decoration: none;
+    color: unset;
+}
