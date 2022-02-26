@@ -7,17 +7,16 @@ if(isset($_POST['submit'])){
         $passwd = $_POST['passwd'];
 
         //accedemos al archivo para hacer la conexion a base de datos
-        require_once("./app/conexion.inc.php");
+        require_once("./../db/conexion.inc.php");
         $conexion = Conexion::openConexion();
         //consulta para obtener los datos del usuario
         $existe = $conexion->query("SELECT nombre,correo,pass FROM Usuario WHERE correo='$correo'");
         //fetch para acceder a la informacion de la consulta
         $comprobacion=$existe->fetch();
         //si no coinciden las pass se muestra un aviso sino se crean sesiones
-        
         if(!password_verify($passwd,$comprobacion['pass'])){
             echo "Contraseña incorrecta, intentelo de nuevo";
-            header("Location: ./index.php");
+            header("Location: ./../../index.php");
         }else{
             $user = $comprobacion['nombre'];
             //inicios de las sesiones

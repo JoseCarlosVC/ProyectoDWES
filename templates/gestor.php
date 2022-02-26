@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Hamburguesa</title>
-    <link rel="stylesheet" href="./css/styleInicio.css">
+    <link rel="stylesheet" href="./../../css/styleInicio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Lacquer&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
     </div>
 
     <nav id="barraDesplegable">
-        <img src="./img/LOGO.png" alt="logo" id="logo">
+        <img src="./../../img/LOGO.png" alt="logo" id="logo">
         <span id="nombreUsuario">jjsjsjsjsjsjjsjsjs</span>
         <li class="apartados">Menús</li>
         <li class="apartados">Para compartir</li>
@@ -38,7 +38,7 @@
     <main id="contenedorTexto">
 
         <div id="contenedorLogo">
-            <img src="./img/LOGO.png" alt="LOGO" id="imagenLogo">
+            <img src="./../../img/LOGO.png" alt="LOGO" id="imagenLogo">
         </div>
 
         <div id="contenedorTabla">
@@ -61,7 +61,8 @@
                     <td><?php echo $articulo['categoria']; ?></td>
                     <td><?php echo $articulo['cantidad']; ?> uds.</td>
                     <td><?php echo $articulo['precio']; ?> €</td>
-                    <td><a href="./detallesProducto.php?nif=<?php echo $articulo['Nif']; ?>">Detalles</a></td>
+                    <td><a href="./detallesProducto.php?nif=<?php echo $articulo['Nif']; ?>">Detalles</a>
+                    </td>
                 </tr>
                 <?php
                     endforeach;

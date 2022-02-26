@@ -25,18 +25,18 @@ if (isset($_POST['submit'])) {
             } else {
                 $apellido2 = "";
             }
-            require_once("./app/conexion.inc.php");
+            require_once("./../db/conexion.inc.php");
             $conexion = Conexion::openConexion();
             //Primero comprobamos si el usuario existe en la base de datos
             $existe = $conexion->query("SELECT * FROM Usuario WHERE correo='$correo'");
             if ($registro = $existe->fetch()) {
                 echo "Este correo ya existe en la base de datos";
-                header("Location: ./index.php");
+                header("Location: ./../../index.php");
             } else {
                 try {
                     $insertar = $conexion->exec("INSERT INTO Usuario (nombre,correo,pass,foto,apellido1,apellido2,fechaNac) VALUES ('$nombre','$correo','$passwd','$fotoPerfil','$apellido1','$apellido2','$fechaNac')");
                     echo "Registrto completo";
-                    header("Location: ./index.php");
+                    header("Location: ./../../index.php");
                 } catch (PDOException $err) {
                     echo "Error insertando el usuario: " . $err->getMessage();
                 }

@@ -14,7 +14,7 @@
         <img src="./img/LOGO.png" alt="logo">
     </div>
     <div id="contenedorGeneral">
-        <form id="contenedorInfo" action="./login.php" method="POST">
+        <form id="contenedorInfo" action="./app/controller/login.php" method="POST">
             <input type="text" name="correo" id="usuario" placeholder="Correo electrónico" required>
             <input type="password" name="passwd" id="contraseña" placeholder="Contraseña" required>
             <div>
@@ -23,7 +23,7 @@
             </div>
             <input type="submit" name="submit" value="Iniciar" id="login">
             <div id="registro">
-                <p>¿No tienes cuenta? <a href="./registro.html">Registrate</a></p>
+                <p>¿No tienes cuenta? <a href="./app/controller/registro.php">Registrate</a></p>
             </div>
         </form>
     </div>

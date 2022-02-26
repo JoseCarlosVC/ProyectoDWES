@@ -15,8 +15,8 @@ ini_set('display_errors', '1');
     <meta name="keywords" content="computers,programming,web design,html,html,html5,css,php">
     <meta name="description" content="Realización de">
     <title>Detalles</title>
-    <link rel="stylesheet" href="./css/detalles.css" title="style">
-    <link rel="icon" type="image/png" href="./img/LOGO.png">
+    <link rel="stylesheet" href="./../../css/detalles.css" title="style">
+    <link rel="icon" type="image/png" href="./../img/LOGO.png">
 
 </head>
 
@@ -29,7 +29,7 @@ ini_set('display_errors', '1');
         <span class="lineaHamburguesa" id="linea3"></span>
     </div>
     <nav id="barraDesplegable">
-        <img src="./img/LOGO.png" alt="logo" id="logo">
+        <img src="./../../img/LOGO.png" alt="logo" id="logo">
         <span id="nombreUsuario">User</span>
         <li class="apartados">Menús</li>
         <li class="apartados">Para compartir</li>
@@ -40,12 +40,12 @@ ini_set('display_errors', '1');
     </nav>
 
     <!-- Logo -->
-    <div class="logo"><img src="./img/LOGO.png" alt="LOGO"></div>
+    <div class="logo"><img src="./../../img/LOGO.png" alt="LOGO"></div>
 
     <!-- Contenido de la página -->
     <div class="contenido">
         <div class="imagen">
-            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>"
+            <img src="data:image/png;charset=utf8;base64,<?php echo base64_encode($fetchDatos['fotoProducto']); ?>"
                 alt="imagenProducto">
         </div>
         <div class="datos">

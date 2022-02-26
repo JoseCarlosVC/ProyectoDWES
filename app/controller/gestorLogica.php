@@ -1,5 +1,5 @@
 <?php
-    require_once("./app/conexion.inc.php");
+    require_once("./../db/conexion.inc.php");
     $conexion = Conexion::openConexion();
     
     try{
@@ -16,5 +16,5 @@
         die();
     }
     $conexion = Conexion::closeConexion();
-    require('gestor.php');
+    require('./../../templates/gestor.php');
     
