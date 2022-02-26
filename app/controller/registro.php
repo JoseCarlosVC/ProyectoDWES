@@ -25,8 +25,14 @@ if (isset($_POST['submit'])) {
             } else {
                 $apellido2 = "";
             }
-            require_once("./../db/conexion.inc.php");
-            $conexion = Conexion::openConexion();
+            // require_once("./../db/conexion.inc.php");
+            // $conexion = Conexion::openConexion();
+            define('NOMBRE_SERVIDOR', 'localhost');
+            define('NOMBRE_USUARIO', 'adminGestor');
+            define('PASSWORD', 'aa');
+            define('NOMBRE_BD', 'gestor');
+
+            $conexion = new PDO('mysql:host='. NOMBRE_SERVIDOR . '; dbname=' . NOMBRE_BD, NOMBRE_USUARIO, PASSWORD);
             //Primero comprobamos si el usuario existe en la base de datos
             $existe = $conexion->query("SELECT * FROM Usuario WHERE correo='$correo'");
             if ($registro = $existe->fetch()) {

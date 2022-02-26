@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor</title>
-    <link rel="stylesheet" href="./../../css/styleInicio.css">
+    <link rel="stylesheet" href="../.././css/styleInicio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Lacquer&display=swap" rel="stylesheet">
@@ -23,10 +23,13 @@
         <span class="lineaHamburguesa" id="linea2"></span>
         <span class="lineaHamburguesa" id="linea3"></span>
     </div>
-
+    <?php
+        //Vamos a recoger el array creado en gestorLogica y mostrar la tabla
+        foreach($users as $dato):
+    ?>
     <nav id="barraDesplegable">
-        <img src="./../../img/LOGO.png" alt="logo" id="logo">
-        <span id="nombreUsuario">jjsjsjsjsjsjjsjsjs</span>
+    <img class="fotoPerfil" src="data:image/png;charset=utf8;base64,<?php echo base64_encode($dato['foto']); ?>"alt="imagenProducto">
+        <span id="nombreUsuario"><?php echo $dato['nombre']?></span>
         <li class="apartados">Menús</li>
         <li class="apartados">Para compartir</li>
         <li class="apartados">Hamburguesas</li>
@@ -34,11 +37,13 @@
         <li class="apartados">Postres</li>
         <li class="apartados">Cerrar Sesión</li>
     </nav>
-
+    <?php
+        endforeach;
+    ?>
     <main id="contenedorTexto">
 
         <div id="contenedorLogo">
-            <img src="./../../img/LOGO.png" alt="LOGO" id="imagenLogo">
+            <img src="../.././img/LOGO.png" alt="LOGO" id="imagenLogo">
         </div>
 
         <div id="contenedorTabla">
@@ -68,6 +73,13 @@
                     endforeach;
                 ?>
             </table>
+            <?php 
+            for($i=1;$i<=$total_paginas;$i++){
+
+                echo "<a href='?pagina=" .$i."'>".$i."</a>  ";
+    
+            }
+            ?>
         </div>
 
     </main>
