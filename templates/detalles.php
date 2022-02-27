@@ -66,7 +66,7 @@ ini_set('display_errors', '1');
         </div>
         <div class="datos">
             <div class="nombre"><?php echo $fetchDatos['nombreProducto']; ?></div>
-            <div class="precio"><?php echo $fetchDatos['precio']; ?></div>
+            <div class="precio"><?php echo $fetchDatos['precio']; ?>€</div>
             <div class="unidades"><?php echo $fetchDatos['cantidad']; ?></div>
             <div class="descripcion"><?php echo $fetchDatos['descripcion']; ?></div>
         </div>
@@ -74,7 +74,7 @@ ini_set('display_errors', '1');
             <form id="generarQR" action="" onsubmit="return false">
                 <input class="boton qr" type="submit" value="Generar QR">
                 <input id="nombre" type="hidden" value="<?php echo $fetchDatos['nombreProducto']; ?>">
-                <input id="precio" type="hidden" value="<?php echo $fetchDatos['precio']; ?>">
+                <input id="precio" type="hidden" value="<?php echo $fetchDatos['precio']; ?>€">
                 <input id="cantidad" type="hidden" value="<?php echo $fetchDatos['cantidad']; ?>">
                 <input id="descripcion" type="hidden" value="<?php echo $fetchDatos['descripcion']; ?>">
                 <!-- Aquí mostraremos cuando el usuario clickee el código QR -->
